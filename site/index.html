@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Risk Evaluation &amp; Mitigation Strategy (REMS) Solutions | Syneos Health</title>
+    <meta name="description"
+        content="Designing and implementing REMS or aRMMs to address the benefit-risk profile is a complex topic and requires skilled experts to help ensure controls are balanced, effective and appropriate.">
+    <meta name="keywords" content="REMS Solutions, Full-Service Risk Evaluation and Mitigation Strategy">
+    <link rel="canonical"
+        href="https://www.syneoshealth.com/solutions/commercial-delivery/global-risk-management-and-rems">
+    <link rel="icon" href="https://www.syneoshealth.com/themes/custom/bootstrap_syneos_sass/favicon.ico"
+        type="image/x-icon">
+    <style>
+        :root {
+            --orange: #eb3300;
+            --light-orange: #ff6720;
+            --gold: #ff9e1b;
+            --dark-gray: #101820;
+            --medium-gray: #bfb8af;
+            --light-gray: #f2f1ef;
+            --dark-purple: #6c1d45;
+            --purple: #b74271;
+            --light-purple: #f2c6cf;
+            --dark-teal: #003d4c;
+            --teal: #007d7e;
+            --green: #dbe442;
+            --white: #fff;
+            --maxw: 1180px;
+            --shadow: 0 10px 30px rgba(16, 24, 32, 0.08);
+            --radius: 18px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.6;
+            background: #fff;
+        }
+
+        a {
+            color: var(--orange);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(var(--maxw), calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .topbar {
+            background: var(--dark-gray);
+            color: #fff;
+            padding: 14px 0;
+            font-size: 14px;
+        }
+
+        .topbar .row,
+        .footer-top .row,
+        .stats,
+        .panel,
+        .cards,
+        .cta,
+        .related-grid {
+            display: grid;
+            gap: 24px;
+        }
+
+        .topbar .row {
+            grid-template-columns: 1fr auto;
+            align-items: center;
+        }
+
+        .top-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: flex-end;
+        }
+
+        .top-links a {
+            color: #fff;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--dark-purple), var(--purple));
+            color: #fff;
+            padding: 64px 0 44px;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            margin: 0 0 20px;
+            opacity: 0.9;
+        }
+
+        .breadcrumb a {
+            color: #fff;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            line-height: 1.2;
+            margin: 0 0 16px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 4.5vw, 3.5rem);
+        }
+
+        h2 {
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 2.3vw, 1.7rem);
+        }
+
+        h4 {
+            font-size: clamp(1.05rem, 2vw, 1.25rem);
+        }
+
+        .hero p {
+            max-width: 960px;
+            margin: 0 auto 18px;
+            font-size: 1.05rem;
+        }
+
+        .hero .center {
+            text-align: center;
+        }
+
+        .section {
+            padding: 56px 0;
+        }
+
+        .section.light {
+            background: var(--light-gray);
+        }
+
+        .section.teal-band {
+            background: linear-gradient(180deg, rgba(0, 125, 126, 0.08), rgba(0, 125, 126, 0.02));
+        }
+
+        .cta {
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            background: linear-gradient(135deg, var(--dark-purple), var(--purple));
+            color: #fff;
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 22px;
+            border-radius: 999px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.15s ease, opacity 0.15s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--light-orange), var(--orange));
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: var(--dark-purple);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--orange);
+            color: var(--orange);
+        }
+
+        .panel {
+            grid-template-columns: 1.1fr 1fr;
+            align-items: stretch;
+            background: #fff;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .panel.reverse {
+            grid-template-columns: 1fr 1.1fr;
+        }
+
+        .panel .copy {
+            padding: 34px;
+        }
+
+        .panel .media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .stats {
+            grid-template-columns: repeat(3, 1fr);
+            align-items: stretch;
+        }
+
+        .stat {
+            background: var(--teal);
+            color: #fff;
+            padding: 28px;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat .num {
+            font-size: clamp(2.1rem, 4vw, 3rem);
+            font-weight: 800;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .solution-hero {
+            background: linear-gradient(rgba(0, 61, 76, 0.74), rgba(0, 61, 76, 0.78)),
+                url('https://ecdn.syneoshealth.com/s3fs-public/2025-03/Med_affairs_accordion_Bkg.png?VersionId=f5sIZTmX4HIz5Yx2lrvgtT9sI_VwT0ZE') center/cover no-repeat;
+            color: #fff;
+            border-radius: var(--radius);
+            padding: 40px 24px;
+            box-shadow: var(--shadow);
+        }
+
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 28px;
+        }
+
+        details.card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        details.card summary {
+            list-style: none;
+            cursor: pointer;
+            padding: 22px 24px;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--dark-purple);
+            position: relative;
+        }
+
+        details.card summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.card summary::after {
+            content: '+';
+            position: absolute;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--orange);
+        }
+
+        details.card[open] summary::after {
+            content: '−';
+        }
+
+        details.card .body {
+            padding: 0 24px 22px;
+        }
+
+        .related-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .related-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(16, 24, 32, 0.06);
+        }
+
+        .related-card .body {
+            padding: 18px;
+        }
+
+        .eyebrow {
+            color: var(--dark-purple);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .footer-top {
+            background: var(--dark-gray);
+            color: #fff;
+            padding: 42px 0 18px;
+        }
+
+        .footer-top .row {
+            grid-template-columns: 1.2fr 1fr 1fr 1.3fr;
+            align-items: start;
+        }
+
+        .footer-top h4 {
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .footer-top a {
+            color: #fff;
+        }
+
+        .footer-links {
+            display: grid;
+            gap: 8px;
+        }
+
+        .footer-bottom {
+            background: #0a1118;
+            color: #fff;
+            padding: 18px 0;
+            font-size: 14px;
+        }
+
+        .footer-bottom .row {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .small-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 980px) {
+
+            .panel,
+            .panel.reverse,
+            .stats,
+            .cards,
+            .related-grid,
+            .footer-top .row,
+            .cta {
+                grid-template-columns: 1fr;
+            }
+
+            .topbar .row {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .top-links {
+                justify-content: flex-start;
+            }
+        }
+
+        .featured-top {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 36px;
+            left: 0;
+            right: 0;
+            -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2);
+            padding: 1.3125rem 0;
+            background-color: #fff !important;
+
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container row">
+            <nav class="top-links" aria-label="Utility navigation">
+                <a href="https://www.syneoshealth.com/news-releases">News</a>
+                <a href="https://www.syneoshealth.com/events">Events</a>
+                <a href="https://www.syneoshealth.com/careers">Careers</a>
+                <a href="https://www.syneoshealth.com/contact-us">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+    <div>
+        <div class="featured-top"><a href="/" title="Home" rel="home" class="navbar-brand">
+                <div class="container">
+                    <svg width="160px" height="72px" viewBox="0 0 160 72" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="01-Main-Navigation-/-Main-Nav-/-Main-Nav-160px"
+                                transform="translate(-156.000000, -58.000000)" fill-rule="nonzero">
+                                <g id="main_nav" transform="translate(0.000000, 36.000000)">
+                                    <g id="syneos_health_rgb_r" transform="translate(156.000000, 22.000000)">
+                                        <path
+                                            d="M144.480675,28.8088996 C141.417876,30.3820539 137.756459,30.2474819 134.817535,28.4537398 C131.878611,26.6599977 130.086398,23.466003 130.087561,20.0242116 L130.087561,9.87655764 C130.089365,6.32309137 128.281957,3.01291157 125.290987,1.09186958 C128.353786,-0.481284685 132.015203,-0.346712672 134.954127,1.4470294 C137.893052,3.24077147 139.685265,6.4347662 139.684101,9.87655764 L139.684101,20.027602 C139.676257,22.7964198 140.775354,25.4536504 142.737083,27.4086387 C143.265442,27.9375578 143.850119,28.4071057 144.480675,28.8088996 L144.480675,28.8088996 Z"
+                                            id="Path" fill="#FF671F"></path>
+                                        <path
+                                            d="M126.413806,19.7462078 L119.629402,19.7462078 C115.531754,19.753096 111.855294,17.2307436 110.38887,13.406433 C108.922446,9.58212251 109.970571,5.24999566 113.02326,2.51792826 C116.075949,-0.214139137 120.499292,-0.778816417 124.141031,1.09865051 C123.512321,1.50142518 122.929878,1.9721434 122.404223,2.50230194 C119.860566,5.05057063 118.810418,8.72916267 119.62568,12.2353374 C120.440943,15.7415121 123.006509,18.5802335 126.413806,19.7462078 L126.413806,19.7462078 Z"
+                                            id="Path" fill="#FF9E1B"></path>
+                                        <path
+                                            d="M160,20.0242116 C159.997295,23.4644124 158.204347,26.6555131 155.26678,28.4484267 C152.329213,30.2413403 148.670036,30.3778878 145.606886,28.8088996 C146.236428,28.4058399 146.819966,27.9351564 147.347086,27.4052482 C149.890916,24.8579833 150.943097,21.1809802 150.131544,17.6745505 C149.31999,14.1681207 146.75909,11.3264981 143.354464,10.1545756 L150.138868,10.1545756 C155.584116,10.1695069 159.992548,14.581741 160,20.0242116 Z"
+                                            id="Path" fill="#EB3300"></path>
+                                        <polygon id="Path" fill="#EB3300"
+                                            points="62.2231645 55.8885227 63.35616 55.8885227 63.35616 63.1441122 72.9967986 63.1441122 72.9967986 55.8885227 74.1297941 55.8885227 74.1297941 71.7558867 72.9967986 71.7558867 72.9967986 64.293479 63.35616 64.293479 63.35616 71.772839 62.2231645 71.772839">
+                                        </polygon>
+                                        <path
+                                            d="M78.2275744,66.7854688 C78.3536941,69.0905878 80.2268487,70.9141342 82.5356711,70.9794708 C83.9781983,70.9508004 85.3229931,70.2448312 86.1653275,69.074031 L86.8437679,69.7317807 C85.8466739,71.1253899 84.2494973,71.9663057 82.5356711,72 C79.6997901,72 77.2065215,69.5080101 77.2065215,66.3311469 C77.2065215,63.1542836 79.7031823,60.6622938 82.4237285,60.6622938 C85.1442746,60.6622938 87.4136579,62.9305131 87.4136579,66.3311469 L87.4136579,66.7854688 L78.2275744,66.7854688 L78.2275744,66.7854688 Z M78.2275744,65.7683301 L86.392605,65.7683301 C86.2806623,63.3950065 84.5777768,61.6997753 82.4237285,61.6997753 C80.2696801,61.6997753 78.3429092,63.611996 78.2275744,65.7649397 L78.2275744,65.7683301 Z"
+                                            id="Shape" fill="#EB3300"></path>
+                                        <path
+                                            d="M97.5088515,64.9715715 C97.5088515,63.0898648 96.1926771,61.6862134 94.4558696,61.6862134 C93.2168341,61.7278255 92.0574963,62.3071971 91.2807683,63.2729498 L90.6023279,62.5948573 C90.6023279,62.5948573 92.0100918,60.6690747 94.4592618,60.6690747 C96.7964891,60.6690747 98.5299044,62.5507813 98.5299044,64.9749619 L98.5299044,71.7762295 L97.5122437,71.7762295 L97.5122437,69.9589416 C96.6071596,71.251181 95.1214656,72.0126846 93.5433672,71.9932191 C91.3893188,71.9932191 89.9137109,70.5183679 89.9137109,68.9418029 C89.9137109,67.2465717 91.1620413,65.9717579 93.2007548,65.6564449 L97.5088515,64.9715715 Z M97.5088515,67.0058489 L97.5088515,65.9887102 L93.4382089,66.6668027 C91.7421078,66.9380397 90.9415481,67.7992171 90.9415481,68.935022 C90.9415481,69.9521607 91.9592088,70.9692994 93.5501516,70.9692994 C94.6067805,70.9917174 95.6267759,70.5820581 96.3740937,69.8351236 C97.1214115,69.0881891 97.531281,68.0687168 97.5088515,67.0126298 L97.5088515,67.0058489 Z"
+                                            id="Shape" fill="#EB3300"></path>
+                                        <polygon id="Path" fill="#EB3300"
+                                            points="103.3604 71.772839 102.34274 71.772839 102.34274 55.8885227 103.3604 55.8885227 103.3604 71.7558867">
+                                        </polygon>
+                                        <path
+                                            d="M108.302839,57.2650505 L109.208557,57.2650505 L109.208557,60.8928452 L111.705218,60.8928452 L111.705218,61.9099839 L109.208557,61.9099839 L109.208557,69.0502977 C109.208557,70.2979879 109.886997,70.9760804 110.904658,70.9760804 C111.414685,70.9662047 111.917125,70.8507604 112.380266,70.6370341 L112.380266,71.6541728 C111.917125,71.8678991 111.414685,71.9833434 110.904658,71.9932191 C109.208557,71.9932191 108.190896,70.9760804 108.190896,69.0469073 L108.190896,61.9099839 L106.036848,61.9099839 L106.036848,60.8928452 L107.512456,60.8928452 C107.742397,60.8906963 107.960511,60.7906472 108.112073,60.6178002 C108.263634,60.4449531 108.33426,60.2157115 108.306231,59.9875918 L108.306231,57.2752218 L108.302839,57.2650505 Z"
+                                            id="Path" fill="#EB3300"></path>
+                                        <path
+                                            d="M116.298259,62.8186278 C117.044199,61.462766 118.481903,60.6332443 120.029682,60.6656842 C122.526343,60.6656842 124.439545,62.5914669 124.439545,65.3140082 L124.439545,71.7762295 L123.421884,71.7762295 L123.421884,65.3106177 C123.421884,63.1576741 121.946276,61.6828229 120.029682,61.6828229 C117.99436,61.6828229 116.298259,63.3780541 116.298259,65.6496639 L116.298259,71.7694486 L115.280599,71.7694486 L115.280599,55.8885227 L116.298259,55.8885227 L116.298259,62.8016755 L116.298259,62.8186278 Z"
+                                            id="Path" fill="#EB3300"></path>
+                                        <path
+                                            d="M0.963385418,30.4363216 C0.963385418,26.1473866 4.66767019,22.4450017 10.5192189,22.4450017 C16.5641232,22.4450017 19.4882015,26.1473866 19.4882015,26.1473866 L15.9942333,29.853162 C15.9942333,29.853162 14.043717,27.513743 10.922891,27.513743 C8.5822715,27.513743 7.21860623,28.8699279 7.21860623,30.4363216 C7.21860623,35.5016724 20.6720801,32.5790938 20.6720801,42.3232827 C20.6720801,47.1953772 16.9677953,50.8977621 10.33604,50.8977621 C3.51092925,50.8977621 0,46.4155708 0,46.4155708 L3.51092925,42.9064422 C5.14950959,44.7472858 7.49101105,45.8090432 9.95611338,45.8290208 C12.8801917,45.8290208 14.4406047,44.2694081 14.4406047,42.3198922 C14.4338203,37.2579319 0.963385418,40.1839009 0.963385418,30.4363216 Z"
+                                            id="Path" fill="#EB3300"></path>
+                                        <path
+                                            d="M28.9795832,50.1247367 L21.5710136,31.2195184 L27.0324591,31.2195184 L31.5169504,43.8862859 L35.5638476,32.4943322 C35.8324621,31.7380116 36.5485676,31.2327846 37.3515382,31.2330802 L41.4696716,31.2330802 L33.8677465,51.4809216 C32.113978,56.1597597 29.7733585,58.4957883 26.459177,58.4957883 C25.3277483,58.5057905 24.2041936,58.3069417 23.1449954,57.9092383 L23.1449954,53.2304002 C23.7603402,53.4965284 24.4250916,53.6294105 25.0955117,53.6203034 C26.5422629,53.6777326 27.8689495,52.8199681 28.4096932,51.4775312 L28.9795832,50.1247367 Z"
+                                            id="Path" fill="#EB3300"></path>
+                                        <path
+                                            d="M49.3768949,33.555547 C49.3768949,33.555547 51.3274111,30.8431771 54.8383404,30.8431771 C59.1294761,30.8431771 62.2469099,33.9624025 62.2469099,39.2244001 L62.2469099,50.3349453 L58.8784532,50.3349453 C57.8311882,50.3349453 56.9822121,49.4864047 56.9822121,48.4396769 L56.9822121,39.7939978 C56.9822121,37.4545787 55.4217991,35.894966 53.2779274,35.894966 C50.9373079,35.894966 49.3768949,37.4545787 49.3768949,40.3771573 L49.3768949,50.317993 L44.1121971,50.317993 L44.1121971,31.2161279 L49.3768949,31.2161279 L49.3768949,33.555547 Z"
+                                            id="Path" fill="#EB3300"></path>
+                                        <path
+                                            d="M70.6867089,42.5199295 C71.0768122,44.4694454 72.8305807,46.2223145 75.7580512,46.2223145 C77.1078719,46.2221497 78.4253348,45.8092488 79.5335722,45.0390431 C80.3573621,44.4932282 81.4633699,44.6784561 82.064155,45.4628509 L83.5533318,47.3784621 C81.3783178,49.5350491 78.4280369,50.7284816 75.3645557,50.6909439 C68.9532936,50.6909439 64.0447771,44.9271578 65.4728942,38.5157934 C66.4908521,33.9557806 70.5788444,30.7414859 75.2526131,30.8262247 C80.6801365,30.8703008 84.7202493,34.949027 84.7202493,40.3737668 C84.7350462,41.0929652 84.6702,41.8115927 84.5268938,42.5165391 L70.6867089,42.5165391 L70.6867089,42.5199295 Z M70.6867089,38.8175446 L79.462336,38.8175446 C79.0998471,36.7464937 77.2740619,35.2534356 75.1712002,35.308416 C72.8305807,35.308416 71.2701677,36.8680287 70.6867089,38.8175446 Z"
+                                            id="Shape" fill="#EB3300"></path>
+                                        <path
+                                            d="M97.5427735,50.7078962 C92.081328,50.7078962 87.4034812,46.0290581 87.4034812,40.7670605 C87.4034812,35.5050628 92.0847202,30.8262247 97.5427735,30.8262247 C103.000827,30.8262247 107.682066,35.5016724 107.682066,40.7670605 C107.682066,46.0324486 103.000827,50.7078962 97.5427735,50.7078962 Z M97.5427735,45.8358017 C100.076749,45.8358017 102.224013,43.6930295 102.224013,40.7670605 C102.224013,37.8410914 100.080141,35.6983192 97.5427735,35.6983192 C95.0054063,35.6983192 92.8615345,37.8410914 92.8615345,40.7670605 C92.8615345,43.6930295 95.0087985,45.8358017 97.5427735,45.8358017 Z"
+                                            id="Shape" fill="#EB3300"></path>
+                                        <path
+                                            d="M121.342464,36.8680287 C121.342464,36.8680287 120.172154,35.308416 118.221638,35.308416 C116.661225,35.308416 115.881019,36.0882224 115.881019,36.8680287 C115.881019,39.5803986 124.656646,38.2242137 124.656646,44.6660922 C124.656646,47.978574 121.942884,50.7078962 117.051328,50.7078962 C111.589883,50.7078962 109.249263,47.1987676 109.249263,47.1987676 L112.173342,44.276189 C112.173342,44.276189 113.733755,46.4189613 116.26773,46.4189613 C118.021498,46.4189613 118.801705,45.6391549 118.801705,44.6660922 C118.801705,41.7435136 110.026078,43.1844602 110.026078,36.8680287 C110.026078,33.9454501 113.146904,30.8262247 117.434647,30.8262247 C121.919138,30.8262247 124.06301,33.7488033 124.06301,33.7488033 L121.342464,36.8680287 Z"
+                                            id="Path" fill="#EB3300"></path>
+                                        <path
+                                            d="M129.565675,43.0015502 C130.937954,43.0375941 132.024458,44.1732853 131.999581,45.5456417 C131.974704,46.9179982 130.847753,48.0135754 129.475069,47.9998729 C128.102385,47.9861703 126.997535,46.8683146 127.000065,45.4957351 C126.995169,44.8202975 127.266267,44.1721377 127.750611,43.7012776 C128.234955,43.2304176 128.890558,42.9776753 129.565675,43.0015502 L129.565675,43.0015502 Z M129.565675,47.4648285 C130.366105,47.4982923 131.106625,47.0422655 131.436914,46.3124811 C131.767203,45.5826968 131.621043,44.7254717 131.067576,44.1463344 C130.514109,43.5671971 129.664303,43.3822607 128.920176,43.6790132 C128.176049,43.9757657 127.686794,44.6947104 127.683863,45.4957351 C127.664622,46.0084803 127.853826,46.5071694 128.208354,46.8781403 C128.562881,47.2491112 129.052522,47.4607532 129.565675,47.4648285 L129.565675,47.4648285 Z M128.570065,44.0900213 L129.625849,44.0900213 C130.326059,44.0900213 130.719926,44.3088094 130.719926,44.9214162 C130.734265,45.1213164 130.662238,45.3177765 130.522084,45.4610503 C130.38193,45.6043242 130.187088,45.6806735 129.986895,45.6707656 L130.736337,46.8959793 L130.151006,46.8959793 L129.467208,45.6981142 L129.117104,45.6981142 L129.117104,46.8959793 L128.570065,46.8959793 L128.570065,44.095491 L128.570065,44.0900213 Z M129.117104,45.2605379 L129.609438,45.2605379 C129.92125,45.2605379 130.156477,45.2113105 130.156477,44.8721889 C130.156477,44.5330673 129.833724,44.5221279 129.582086,44.5221279 L129.117104,44.5221279 L129.117104,45.2550682 L129.117104,45.2605379 Z"
+                                            id="Shape" fill="#EB3300"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+            </a></div>
+    </div>
+    </div>
+    <section class="hero">
+        <div class="container center">
+            <div class="breadcrumb">
+                <a href="https://www.syneoshealth.com/solutions">Solutions</a> /
+                <a href="https://www.syneoshealth.com/solutions/commercial-delivery">Commercial Delivery</a>
+            </div>
+            <h1>Global Risk Management and REMS</h1>
+            <h4>Providing benefit-risk solutions for medicinal products</h4>
+            <p>Global regulatory authorities may require pharmaceutical companies to include risk management activities
+                as part of their pharmacovigilance system to obtain, or retain, marketing authorization for their
+                medicinal product. The risk management system plays a critical role in positively impacting the
+                benefit-risk ratio and enabling patients to access these life-enhancing therapies.</p>
+            <p>In the United States, the FDA applies risk management controls through Risk Evaluation and Mitigation
+                Strategy (REMS) programs. Whereas in Europe, and most other countries, the regulators require Risk
+                Management Plans (RMP) with additional risk minimization measures (aRMMs) to apply the necessary
+                controls.</p>
+        </div>
+    </section>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="cta">
+                    <div>
+                        <h3>Let&#39;s talk about what you&#39;re looking for.</h3>
+                    </div>
+                    <div>
+                        <a class="btn btn-secondary" href="https://www.syneoshealth.com/contact-us">Contact us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="panel reverse">
+                    <div class="media">
+                        <img src="https://ecdn.syneoshealth.com/s3fs-public/2023-05/linkedin-sales-solutions-EI50ZDA-l8Y-unsplash.jpg"
+                            alt="Professionals collaborating">
+                    </div>
+                    <div class="copy">
+                        <h2>Your expert partner for efficient, effective risk management design and implementation</h2>
+                        <p>Regardless of the terms used, designing and implementing REMS or aRMMs to address the
+                            benefit-risk profile is a complex topic and requires skilled experts to help ensure controls
+                            are balanced, effective and appropriate.</p>
+                        <p>Syneos Health is here to help and has the experience, solutions and capabilities to address
+                            the global risk management challenges you may have.</p>
+                        <p>For example:</p>
+                        <ul>
+                            <li>Do you have an asset in clinical development that may require risk management controls?
+                            </li>
+                            <li>Are you planning on including risk management activities as part of your marketing
+                                application?</li>
+                            <li>Have the regulators indicated that you may need a REMS or aRMMs program to obtain
+                                marketing approval?</li>
+                            <li>Are you currently operating a REMS or aRMM program and are looking to transition away
+                                from your current vendors?</li>
+                            <li>Are you considering migrating your brand risk management system to a multi-sponsor
+                                shared program?</li>
+                        </ul>
+                        <p>Our Global Risk Management Solutions team is dedicated to helping sponsors plan, implement
+                            and assess measures to positively impact the risk-benefit balance of medicinal products.</p>
+                        <p>
+                            <a class="btn btn-outline"
+                                href="https://www.syneoshealth.com/how-we-partner/reinventing-end-end-model">Discover
+                                Syneos One</a>
+                        </p>
+                        <p>
+                            <a class="btn btn-primary" href="https://go.syneoshealth.com/l/63102/2025-10-07/4txv72">View
+                                our REMS technology capabilities</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>       
+
+        <section class="section light">
+            <div class="container">
+                <h2 style="text-align:center; max-width: 1000px; margin: 0 auto 34px;">Syneos Health has <strong>one of
+                        the largest pharmacovigilance (PV) and GRM teams in the industry</strong>. Our broad experience
+                    will help ensure you are supported across all therapeutic areas and stages of development.</h2>
+                <div class="stats">
+                    <div class="stat">
+                        <div>Currently supporting</div>
+                        <span class="num">130+</span>
+                        <div>with GRM Solutions</div>
+                    </div>
+                    <div class="stat">
+                        <div>Our GRM leadership team has worked with</div>
+                        <span class="num">90%</span>
+                        <div>of all currently active REMS programs</div>
+                    </div>
+                    <div class="stat">
+                        <div>Our GRM team includes</div>
+                        <span class="num">&gt;150</span>
+                        <div>experts</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <section class="section" id="patient-sms-enrollment">
+            <div class="container">
+                <div class="panel">
+                    <div class="copy">
+                        <p class="eyebrow">Patient SMS Consent and Enrollment</p>
+                        <h2>How patients opt in to SMS communications for REMS program support</h2>
+                        <p>
+                            For REMS programs administered by Syneos Health, patients may choose to receive
+                            SMS communications related to program support through a paper enrollment process
+                            completed with their healthcare provider.
+                        </p>
+                        <p>
+                            The enrollment form includes a separate, clearly labeled
+                            <strong>Text Message Consent (Optional)</strong> section. This consent is not
+                            pre-selected and is not required as a condition of program participation.
+                            Patients must actively indicate consent and sign the enrollment form before any
+                            SMS communications are sent.
+                        </p>
+                        <p>
+                            The consent language explains that message frequency varies, message and data
+                            rates may apply, and that patients can reply <strong>STOP</strong> to opt out
+                            or <strong>HELP</strong> for assistance at any time.
+                        </p>
+                        <p>
+                            After the enrollment form is received and processed, patients receive a
+                            confirmation text message asking them to reply <strong>YES</strong> to confirm
+                            their mobile number before ongoing SMS communications begin.
+                        </p>
+                        <p>
+                            <a class="btn btn-primary"
+                                href="syneos_patient_enrollment_form_clean.pdf">
+                                View sample patient enrollment form
+                            </a>
+                        </p>
+                        <p style="margin-top: 12px;">
+                            <a href="text-message-terms-conditions.html">Text Message Terms and Conditions</a><br>
+                            <a href="syneos-health-tm-privacy-statement-and-terms-use.html">Privacy Notice</a>
+                        </p>
+                    </div>
+                    <div class="media">
+                        <img src="https://ecdn.syneoshealth.com/s3fs-public/inline-images/Challenging%20Status%20Quo.png?VersionId=l79_nh3PJ0YMtxINi4WMuSs3z_oaJxP"
+                            alt="Healthcare provider reviewing enrollment documents with patient">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section teal-band">
+            <div class="container">
+                <div class="solution-hero">
+                    <p class="eyebrow">Our Global Risk Management and REMS solution</p>
+                    <h2>Our solution provides a new option that complements sponsors&#39; internal GRM activities.</h2>
+                    <p>Companies can focus on the science of GRM while Syneos Health provides operational excellence,
+                        scalability and optionality.</p>
+                    <div class="cards">
+                        <details class="card">
+                            <summary>Strategy</summary>
+                            <div class="body">
+                                <p><strong>Establish successful foundations</strong></p>
+                                <ul>
+                                    <li>GRM organization design, process and controls</li>
+                                    <li>Asset-specific GRM strategy</li>
+                                    <li>GRM roadmap</li>
+                                    <li>Industry intelligence and market research</li>
+                                    <li>Stakeholder feedback</li>
+                                    <li>Advisory board and committee meetings</li>
+                                    <li>Regulatory authority negotiation and readiness</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="card">
+                            <summary>Submission</summary>
+                            <div class="body">
+                                <p><strong>Obtain GRM approval</strong></p>
+                                <ul>
+                                    <li>Develop EU RMP, aRMMs, local RMP and REMS documents</li>
+                                    <li>Forms and education materials design</li>
+                                    <li>Website screenshots</li>
+                                    <li>Translations</li>
+                                    <li>Country-specific submission package</li>
+                                    <li>Health authority negotiations</li>
+                                    <li>Drug Master File activities</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="card">
+                            <summary>Implementation</summary>
+                            <div class="body">
+                                <p><strong>Develop, launch and run GRM programs</strong></p>
+                                <ul>
+                                    <li>Automated RM documents distribution</li>
+                                    <li>Program management, including consortia</li>
+                                    <li>Engagement center</li>
+                                    <li>GRM technology</li>
+                                    <li>Omnichannel stakeholder outreach</li>
+                                    <li>Print fulfillment</li>
+                                    <li>AE management</li>
+                                    <li>Grant management</li>
+                                    <li>Internal and external training</li>
+                                    <li>Quality management system</li>
+                                    <li>Data migration</li>
+                                    <li>Change management and stakeholder onboarding</li>
+                                    <li>Local safety office in 60+ countries via third party</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="card">
+                            <summary>Assessment</summary>
+                            <div class="body">
+                                <p><strong>Evaluate and assess GRM execution</strong></p>
+                                <ul>
+                                    <li>Tracking of global commitments and variations</li>
+                                    <li>Stakeholder surveys</li>
+                                    <li>Post-authorization safety studies</li>
+                                    <li>Monitoring and oversight</li>
+                                    <li>Non-compliance</li>
+                                    <li>Stakeholder audits</li>
+                                    <li>Assessment reports</li>
+                                    <li>Data analysis</li>
+                                    <li>Patient support and hub integrations</li>
+                                    <li>Health authority inspections support</li>
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 style="text-align:center; max-width: 1000px; margin: 0 auto 18px;">Full-Service REMS powered by
+                    advanced, scalable technology and deep life sciences expertise</h2>
+                <p style="text-align:center; max-width: 980px; margin: 0 auto 34px;">Whether launching a new program,
+                    transitioning an existing one or managing a shared REMS, we deliver innovative, compliant
+                    tech-enabled solutions that reduce stakeholder burden, help ensure FDA compliance and deliver
+                    operational excellence throughout the REMS lifecycle.</p>
+                <div class="panel">
+                    <div class="media">
+                        <img src="https://ecdn.syneoshealth.com/s3fs-public/styles/card_image_panel_660x660_/public/2023-05/asaf-gazit-nlsY0hEMOcI-unsplash.jpg?VersionId=mqxTFX7_H0aCTAa.G60.xWB3akSD5j6V&amp;itok=VWLaA9jr"
+                            alt="Team discussion">
+                    </div>
+                    <div class="copy">
+                        <h2>Our experience</h2>
+                        <ul>
+                            <li>Supporting GRMR programs since 2010</li>
+                            <li>Our GRMR portfolio includes approximately 30 programs</li>
+                            <li>Supporting 130+ customers with GRM solutions</li>
+                            <li>Our leadership team has worked on 90% of all currently active REMS programs</li>
+                            <li>Comprehensive GRMR experience across the entire spectrum of program designs in 14
+                                therapeutic areas</li>
+                            <li>GRMR leaders and experts thoughtfully recruited, with a growing team of more than 150
+                                experts</li>
+                            <li>Industry-leading REMS Engagement Center leveraging top talent to provide stakeholders
+                                with premier service</li>
+                            <li>GRMR technology platform based on purpose-built proprietary automated workflows to drive
+                                efficient operations</li>
+                            <li>Delivery of exceptional outcomes to GRMR sponsors</li>
+                            <li>Extensive experience preparing REMS and RMP submissions</li>
+                        </ul>
+                        <p>
+                            <a class="btn btn-outline"
+                                href="https://www.syneoshealth.com/how-we-partner/reinventing-end-end-model">Discover
+                                Syneos One</a>
+                        </p>
+                        <p>
+                            <a class="btn btn-primary" href="https://go.syneoshealth.com/l/63102/2025-11-25/4v43xd">View
+                                our GRMR capabilities</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="cta">
+                    <div>
+                        <h3>Innovating REMS delivery across new, transitioning and shared programs, with scalable,
+                            AI-enabled technology</h3>
+                    </div>
+                    <div>
+                        <a class="btn btn-secondary"
+                            href="https://go.syneoshealth.com/l/63102/2025-09-25/4twrk3/63102/1758816161vDUP0LzL/REMS_Technology_Syneos_Health.pdf">View
+                            our capabilities</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section light">
+            <div class="container">
+                <h2 style="text-align:center; color: var(--dark-purple);">Related Content</h2>
+                <div class="related-grid">
+                    <article class="related-card">
+                        <a
+                            href="https://www.syneoshealth.com/insights-hub/global-risk-management-regulatory-harmonization-supports-streamlined-lifecycle">
+                            <img src="https://ecdn.syneoshealth.com/s3fs-public/styles/insights_teaser_332x222_/public/2025-10/GRM%20Harmonization%20Image.png?VersionId=O9h.UFbOPZx.7UVG2loaq0rVr36Bl9Ou&amp;itok=TzMmSgK-"
+                                alt="Global risk management harmonization">
+                        </a>
+                        <div class="body">
+                            <div class="eyebrow">Oct 22, 2025</div>
+                            <h3><a
+                                    href="https://www.syneoshealth.com/insights-hub/global-risk-management-regulatory-harmonization-supports-streamlined-lifecycle">Global
+                                    Risk Management: Regulatory Harmonization Supports a Streamlined, Lifecycle
+                                    Approach</a></h3>
+                        </div>
+                    </article>
+                    <article class="related-card">
+                        <a
+                            href="https://www.syneoshealth.com/insights-hub/webinar-redefining-rems-how-ai-and-digital-innovation-are-transforming-risk-management">
+                            <img src="https://ecdn.syneoshealth.com/s3fs-public/styles/insights_teaser_332x222_/public/2025-09/shutterstock_2384634469.jpg?VersionId=q9TOhcHGLo522QdFYC_CH6T9mhhtj12X&amp;itok=_Eq6Ghsy"
+                                alt="AI and digital innovation webinar">
+                        </a>
+                        <div class="body">
+                            <div class="eyebrow">Nov 18, 2025</div>
+                            <h3><a
+                                    href="https://www.syneoshealth.com/insights-hub/webinar-redefining-rems-how-ai-and-digital-innovation-are-transforming-risk-management">WEBINAR
+                                    | Redefining REMS: How AI and Digital Innovation Are Transforming Risk
+                                    Management</a></h3>
+                        </div>
+                    </article>
+                    <article class="related-card">
+                        <a
+                            href="https://www.syneoshealth.com/insights-hub/poc-global-how-emerging-biotechs-can-de-risk-phase-iiiii">
+                            <img src="https://ecdn.syneoshealth.com/s3fs-public/styles/insights_teaser_332x222_/public/2025-10/From%20PoC%20to%20Global_Derisking%20Ph%20II%20and%20III.png?VersionId=UV4TC44QCydG2A1LJTAymJcGol8lqPz8&amp;itok=UV_AL39v"
+                                alt="Emerging biotech development strategy">
+                        </a>
+                        <div class="body">
+                            <div class="eyebrow">Nov 03, 2025</div>
+                            <h3><a
+                                    href="https://www.syneoshealth.com/insights-hub/poc-global-how-emerging-biotechs-can-de-risk-phase-iiiii">From
+                                    PoC to Global: How Emerging Biotechs Can De-Risk Phase II/III</a></h3>
+                        </div>
+                    </article>
+                </div>
+                <p style="text-align:center; margin-top: 28px;"><strong>Looking for exclusive insight?</strong></p>
+                <p style="text-align:center;"><a class="btn btn-outline"
+                        href="https://www.syneoshealth.com/insights-hub">Visit the Insights Hub</a></p>
+            </div>
+        </section>
+    </main>
+
+    <section class="footer-top">
+        <div class="container row">
+            <div>
+                <h4>Corporate Links</h4>
+                <div class="footer-links">
+                    <a href="https://www.syneoshealth.com/who-we-are">Who We Are</a>
+                    <a href="https://www.syneoshealth.com/careers">Careers</a>
+                    <a href="https://www.syneoshealth.com/news-releases">News</a>
+                    <a href="https://www.syneoshealth.com/events">Events</a>
+                    <a href="https://www.syneoshealth.com/office-locations">Office Locations</a>
+                </div>
+            </div>
+            <div>
+                <h4>Our Solutions</h4>
+                <div class="footer-links">
+                    <a href="https://www.syneoshealth.com/how-we-partner">How We Partner</a>
+                    <a href="https://www.syneoshealth.com/insights-hub">Insights Hub</a>
+                    <a href="https://www.syneoshealth.com/therapeutic-depth">Therapeutic Depth</a>
+                </div>
+            </div>
+            <div>
+                <h4>Our Resources</h4>
+                <div class="footer-links">
+                    <a href="https://secure.ethicspoint.com/domain/media/en/gui/42406/index.html">Business Ethics
+                        Helpline</a>
+                    <a href="https://www.syneoshealth.com/legal">Legal Notices</a>
+                    <a href="https://www.participants.syneoshealth.com/en/">Study Participants</a>
+                    <a href="https://www.syneoshealth.com/sitemap.xml">Sitemap</a>
+                </div>
+            </div>
+            <div>
+                <h4>About Syneos Health</h4>
+                <p>Syneos Health is a leading fully integrated biopharmaceutical solutions organization built to
+                    accelerate customer success. We translate unique clinical, medical affairs and commercial insights
+                    into outcomes to address modern market realities.</p>
+                <p><a href="https://www.linkedin.com/company/11408925/">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-bottom">
+        <div class="container row">
+            <div>© 2026 Syneos Health. All Rights Reserved</div>
+            <div class="small-links">
+                <a href="https://www.syneoshealth.com/syneos-health-website-terms-use">Terms of Use</a>
+                <a href="https://www.syneoshealth.com/syneos-health-tm-privacy-statement-and-terms-use">Privacy
+                    Notice</a>
+                <a href="https://www.syneoshealth.com/ccpa-privacy-notice-california-residents#tracking-opt-out">Online
+                    Tracking Opt-Out</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
